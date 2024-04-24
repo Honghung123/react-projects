@@ -1,0 +1,65 @@
+.wrapper {
+    padding: 9px 16px;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.avatar {
+    --image-size: 40px;
+    width: var(--image-size);
+    height: var(--image-size);
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.info-wrapper {
+    width: 100%;
+}
+.info-section {
+    display: flex;
+    justify-content: space-between;
+}
+.info {
+}
+.more {
+}
+
+.name,
+.username {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.name {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 600;
+
+    .verify-badge {
+        color: rgb(32, 213, 236);
+        margin-left: 10px;
+    }
+}
+
+.username {
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 400;
+}
+
+.more {
+    .icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

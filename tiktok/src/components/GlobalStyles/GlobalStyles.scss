@@ -1,0 +1,51 @@
+// Normalized css - A modern alternative to CSS resets
+@import "normalize.css";
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+    --primary-color: rgb(254 44 85);
+    --input-color: rgb(22 24 35);
+    --primary-background: rgba(22, 24, 35, 0.06);
+
+    // Default layout styles
+    --default-layout-header-height: 60px;
+    --default-layout-sidebar-width: 356px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem = 16px => 62.5% => 1rem = 10px to calculate easily */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    /* Cho trình duyệt biết cách hiển thị văn bản trong các trang web. */
+    /* Văn bản sẽ được tối ưu hóa cho hiệu suất - optimizeSpeed, mức độ dễ đọc hoặc độ chính xác - geometricPrecision, cuối cùng sẽ xác định chất lượng văn bản - optimizeLegibility. */
+    text-rendering: optimizeSpeed;
+}
+
+input,
+button,
+[tabIndex] {
+    border: none;
+    outline: none;
+}
+
+input:placeholder-shown {
+    text-overflow: ellipsis;
+}
+
+a[href] {
+    text-decoration: none;
+    color: var(--input-color);
+}

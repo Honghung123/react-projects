@@ -1,0 +1,78 @@
+.wrapper {
+    --min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: var(--button-border-radius);
+    background-color: transparent;
+    user-select: none;
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    &:not(.circle) {
+        min-width: var(--min-width);
+    }
+}
+
+.text + .icon,
+.icon + .text {
+    margin-left: 12px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}
+
+.custom {
+    flex: 1;
+}
+
+.icon {
+    --size: 20px;
+    width: var(--size);
+    height: var(--size);
+}
+// Type of button
+.outline {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: white;
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+    }
+}
+.rounded {
+    border-radius: 999px !important;
+}
+
+.circle {
+    --size: 32px;
+    width: var(--size);
+    height: var(--size);
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    & .icon {
+        color: white;
+    }
+}
+
+// Size of button
+.large {
+    padding: 12 15px !important;
+}
